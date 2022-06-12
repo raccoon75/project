@@ -182,7 +182,7 @@ with st.echo(code_location='below'):
     Как обстоят дела у этих трех компаний? Проанализируем поведение их акций. Ниже представлены графики изменения цен акиций
     Амазона, LMVH и Теслы соответственно.
     """
-    amazondf = pd.read_csv('AMZN.csv')
+    amazondf = pd.read_csv('https://raw.githubusercontent.com/raccoon75/project/master/AMZN.csv')
     amazondf = amazondf.dropna().assign(Date=lambda x: pd.to_datetime(x['Date'])).set_index('Date')
     fig, ax = plt.subplots()
     amazondf.iloc[:].plot(y='Adj Close', ax=ax, label='Adj Close price', color='darkorange')
@@ -194,7 +194,7 @@ with st.echo(code_location='below'):
     plt.legend(fontsize=11)
     st.pyplot(fig,figsize = (2,2))
 
-    lmvhdf = pd.read_csv('LVMUY.csv')
+    lmvhdf = pd.read_csv('https://raw.githubusercontent.com/raccoon75/project/master/LVMUY.csv')
     lmvhdf = lmvhdf.dropna().assign(Date=lambda x: pd.to_datetime(x['Date'])).set_index('Date')
     fig, ax = plt.subplots()
     lmvhdf.iloc[:].plot(y='Adj Close', ax=ax, label='Adj Close price', color='dodgerblue')
@@ -274,7 +274,7 @@ with st.echo(code_location='below'):
     библиотеку selenium, чтобы достать список и характеристики моделей в продаже (ps код для вебскреппинга в отдельном файле,
     чтобы проект не грузился миллион лет, а здесь просто данные из готового csv-файла. Поэтому цены могут отличаться).
     """
-    finaltesla = pd.read_csv('tesla_models.csv').drop('Unnamed: 0', axis=1)
+    finaltesla = pd.read_csv('https://raw.githubusercontent.com/raccoon75/project/master/tesla_models.csv').drop('Unnamed: 0', axis=1)
     word = 'See model'
     e = pd.Series(['https://moscowteslaclub.ru/cars/tesla-model-3-long-range-awd_32019/',
                    'https://moscowteslaclub.ru/cars/tesla-model-3-long-range-awd_26262/',
@@ -310,7 +310,7 @@ with st.echo(code_location='below'):
     На этом оставим Теслу в покое. И вернемся к Forbes). Нас интересует еще один список – список крупнейших мировых компаний 2022.
     Вот он:
     """
-    companies = pd.read_csv('forbes global 2022(2000 companies) - companies.csv')
+    companies = pd.read_csv('https://raw.githubusercontent.com/raccoon75/project/master/forbes%20global%202022(2000%20companies)%20-%20companies.csv')
     companies = companies.set_index(companies.iloc[:, 0])
     companies = companies.iloc[:, 1:]
     companies = companies.rename(columns={'global company': 'Company', 'country': 'Country', 'sales': 'Sales', 'profit': 'Profit'})
