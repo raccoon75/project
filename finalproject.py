@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import os
 import matplotlib.pyplot as plt
 import networkx as nx
 import folium
@@ -13,7 +12,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.neighbors import KNeighborsRegressor
 from IPython.display import HTML
 
-os.chdir('/Users/kseniasmirnova')
 with st.echo(code_location='below'):
 
     '''
