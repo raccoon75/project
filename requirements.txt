@@ -3,7 +3,6 @@ requests
 matplotlib
 networkx
 folium
-sqlite3
 numpy
 sklearn.linear_model
 sklearn.neighbors
