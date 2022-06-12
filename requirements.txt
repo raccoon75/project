@@ -1,6 +1,6 @@
 seaborn
 requests
-matplotlib.pyplot==3.5.2
+matplotlib
 networkx
 folium
 sqlite3
