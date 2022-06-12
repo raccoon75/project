@@ -43,7 +43,7 @@ with st.echo(code_location='below'):
     Думаю, этого достаточно, чтобы понять, что списков у них дофига ... Но нас сейчас будет
     интересовать один конкретный: Forbes Billionaires.  Вот он:
     """
-    df = pd.read_csv('Forbes Billionaires.csv')
+    df = pd.read_csv('https://raw.githubusercontent.com/raccoon75/project/master/Forbes%20Billionaires.csv')
     df = df.set_index(df.iloc[:, 0])
     df = df.iloc[:, 1:]
     st.write(df)
