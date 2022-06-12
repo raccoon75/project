@@ -1,2 +1,11 @@
 seaborn
-altair
+requests
+matplotlib.pyplot
+networkx
+folium
+sqlite3
+numpy
+sklearn.linear_model
+sklearn.neighbors
+IPython.display
+Branca=0.3.1
